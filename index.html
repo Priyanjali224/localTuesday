@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            1st page Git commit.
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>JECRC University</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Number</th>
+                    <th>Operator</th>
+                    <th>Multiplier</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="multiplicationTable"></tbody>
+        </table>
+        <script>
+            const number = 2;
+            const tableBody = document.getElementById("multiplicationTable");
+
+            for (let i = 1; i <= 10; i++) {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${i}</td>
+                    <td>${number}</td>
+                    <td>*</td>
+                    <td>${i}</td>
+                    <td>${number * i}</td>
+                `;
+                tableBody.appendChild(row);
+            }
+        </script>
+    </body>
+    <p></p>
+</html>
